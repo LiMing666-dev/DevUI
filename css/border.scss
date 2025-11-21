@@ -1,0 +1,15 @@
+$BorderList: (
+    None:none,
+    Small:2px,
+    Medium:4px,
+    Large:10px,
+    XLarge:20px,
+    Circular:50%,
+);
+
+@each $name, $size in $BorderList {
+    .d-borderRadius-#{$name} {
+        border-radius: $size;
+
+    }
+}

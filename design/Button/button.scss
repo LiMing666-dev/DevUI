@@ -1,0 +1,91 @@
+.Button {
+    // 按钮背景颜色 默认是从初始变量中获取
+    --btn-color: var(--v-color);
+    // 按钮按下颜色 默认是从初始变量中获取
+    --btn-active-color: var(--v-btn-color);
+    // 按钮文字颜色 默认是白色
+    --btn-text-color: #000000;
+    display: inline-block;
+    height: 30px;
+    border: 1px #ccc solid;
+    padding: 0px 20px;
+    line-height: 30px;
+    cursor: pointer;
+    background: var(--btn-color);
+    color: var(--btn-text-color);
+    transition: .1s all ease-in;
+    font-size: 12px;
+    font-weight: 500;
+    user-select: none;
+
+    &:hover {
+        background: color-mix(in srgb, var(--btn-active-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--btn-active-color), transparent 80%);
+
+    }
+}
+
+// Primary Button
+.Button-primary {
+    background: var(--v-primary-color);
+    color: #fff;
+    border: none;
+
+    &:hover {
+        background: color-mix(in srgb, var(--v-primary-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--v-primary-color), transparent 80%);
+    }
+}
+
+// Outline Button
+.Button-outline {
+    background: transparent;
+
+    border: 1px #ccc solid;
+
+    &:hover {
+        background: color-mix(in srgb, var(--v-btn-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--v-btn-color), transparent 30%);
+    }
+}
+
+// Subtle Button
+.Button-subtle {
+    background: transparent;
+
+    border: none;
+
+    &:hover {
+        background: color-mix(in srgb, var(--v-btn-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--v-btn-color), transparent 30%);
+    }
+}
+
+// Transparent Button
+.Button-transparent {
+    background: transparent;
+
+    border: none;
+
+    &:hover {
+        color: var(--v-primary-color);
+        background: none;
+    }
+
+    &:active {
+        color: var(--v-primary-color);
+        background: none;
+    }
+}
