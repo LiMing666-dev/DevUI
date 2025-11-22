@@ -91,7 +91,11 @@
     </div>
 
     <h4 class="BoxTitle2" style="margin-top: 30px">颜色</h4>
-    <div class="BoxDocs">Color 属性可以为按钮添加任何颜色包括你自定义的，方便为了通用场景生成了常用颜色,primary(操作),success(成功),error(危险)</div>
+    <div class="BoxDocs">
+      Color
+      属性可以为按钮添加任何颜色包括你自定义的，方便为了通用场景生成了常用颜色success(成功),error(危险)<br />
+      对于自定义颜色我们还提供了一个对比度的功能，可以自动识别并且更改文字颜色，如果你想自己修改也可以直接使用color属性来修改
+    </div>
 
     <div class="BoxCode">
       <div class="BoxCodeHeader">
@@ -102,11 +106,34 @@
         </div>
       </div>
       <div class="BoxCodeConten">
-        <d-button color="#BF360C">去除圆角</d-button>
-        <d-button shape="sm">SN 圆角</d-button>
-        <d-button shape="">初始圆角</d-button>
-        <d-button shape="lg">LG 圆角</d-button>
-        <d-button shape="xl">XL 圆角</d-button>
+        <d-button color="success">Success 成功</d-button>
+        <d-button color="error">Error 失败</d-button>
+        <d-button color="#1976D2">自定义颜色</d-button>
+        <d-button color="#FFFDE7">自定义颜色</d-button>
+      </div>
+      <div class="BoxCodeT">
+        <div v-text="code12"></div>
+      </div>
+    </div>
+
+    <h4 class="BoxTitle2" style="margin-top: 30px">尺寸</h4>
+    <div class="BoxDocs">
+      Size 属性可以更改按钮的尺寸，目前提供了三种尺寸选择 small,medium,large
+    </div>
+
+    <div class="BoxCode">
+      <div class="BoxCodeHeader">
+        <div class="BoxCodeHeaderLeft"></div>
+        <div class="BoxCodeHeaderRight">
+          <div class="mdi mdi-content-copy"></div>
+          <div class="mdi mdi-chevron-up"></div>
+        </div>
+      </div>
+      <div class="BoxCodeConten">
+        <d-button color="success">Success 成功</d-button>
+        <d-button color="error">Error 失败</d-button>
+        <d-button color="#1976D2">自定义颜色</d-button>
+        <d-button color="#FFFDE7">自定义颜色</d-button>
       </div>
       <div class="BoxCodeT">
         <div v-text="code12"></div>

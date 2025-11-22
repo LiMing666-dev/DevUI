@@ -8,7 +8,7 @@
     display: inline-block;
     height: 30px;
     border: 1px #ccc solid;
-    padding: 0px 20px;
+    padding: var(--d-medium-padding);
     line-height: 30px;
     cursor: pointer;
     background: var(--btn-color);
@@ -40,6 +40,36 @@
 
     &:active {
         background: color-mix(in srgb, var(--v-primary-color), transparent 80%);
+    }
+}
+
+// Success Button
+.Button-color-success {
+    background: var(--v-success-color);
+    color: #fff;
+    border: none;
+
+    &:hover {
+        background: color-mix(in srgb, var(--v-success-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--v-success-color), transparent 80%);
+    }
+}
+
+// Error Button
+.Button-color-error {
+    background: var(--v-error-color);
+    color: #fff;
+    border: none;
+
+    &:hover {
+        background: color-mix(in srgb, var(--v-error-color), transparent 30%);
+    }
+
+    &:active {
+        background: color-mix(in srgb, var(--v-error-color), transparent 80%);
     }
 }
 

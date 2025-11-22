@@ -4,6 +4,7 @@
     class="Button"
     :class="[
       `Button-${type}`,
+      `Button-color-${ColorSelected}`,
       `d-borderRadius-${ShapeList[shape || 'default']}`,
     ]"
   >
@@ -21,6 +22,9 @@ defineOptions({
 
 // Btn Ref
 const BtnRef = ref<HTMLElement | null>(null);
+
+// Color Type 通用颜色类型
+const ColorTypes: string[] = ["primaty", "success", "error"];
 
 const props = defineProps({
   /**
@@ -51,8 +55,14 @@ const ShapeList = {
 
 const { type, shape, color } = toRefs(props);
 
+let ColorSelected = ref<string>("");
 // 转换颜色 将color 属性转换
 const ColorSeletct = () => {
+  if (ColorTypes.includes(color?.value as any)) {
+    ColorSelected.value = color?.value as any;
+    return;
+  }
+
   const isTextDark = isContrastWithWhiteSimpl(color?.value as any);
   if (isTextDark) {
     BtnRef.value?.style.setProperty("--btn-text-color", "white");

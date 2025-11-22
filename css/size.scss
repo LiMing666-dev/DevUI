@@ -1,3 +1,9 @@
 $fontSize: (
     Base100:100,
 );
+
+:root {
+    --d-small-padding: 0px 5px;
+    --d-medium-padding: 0px 10px;
+    --d-large-padding: 0px 15px;
+}

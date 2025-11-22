@@ -6,6 +6,7 @@ import { type App } from 'vue'
 
 import '../css/border.scss'
 import '../css/color.scss'
+import '../css/size.scss'
 
 const Components = [
     Button
