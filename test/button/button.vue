@@ -130,14 +130,17 @@
         </div>
       </div>
       <div class="BoxCodeConten">
-        <d-button color="success">Success 成功</d-button>
-        <d-button color="error">Error 失败</d-button>
-        <d-button color="#1976D2">自定义颜色</d-button>
-        <d-button color="#FFFDE7">自定义颜色</d-button>
+        <d-button size="small">Small 按钮</d-button>
+        <d-button >默认尺寸</d-button>
+        <d-button size="large">Large 按钮</d-button>
       </div>
       <div class="BoxCodeT">
         <div v-text="code12"></div>
       </div>
+    </div>
+    <h4 class="BoxTitle2" style="margin-top: 30px">Api</h4>
+    <div class="BoxDocs">
+      下面是关于Button的Api文档
     </div>
   </div>
 </template>

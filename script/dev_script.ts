@@ -1,15 +1,18 @@
 import { Button } from '../design/Button/index.ts'
+import { Icon } from '../design/Icon/index.ts'
 import { OptionsDto } from '../dtos/global.dto.ts'
 import { createDevUIThemes } from '../composables/themes.ts'
 import { type App } from 'vue'
 
 
+// Global Styles
 import '../css/border.scss'
 import '../css/color.scss'
 import '../css/size.scss'
 
 const Components = [
-    Button
+    Button,
+    Icon
 ]
 
 const createDevUI = (option: OptionsDto) => {

@@ -5,6 +5,7 @@
     :class="[
       `Button-${type}`,
       `Button-color-${ColorSelected}`,
+      `Button-size-${size}`,
       `d-borderRadius-${ShapeList[shape || 'default']}`,
     ]"
   >
@@ -42,6 +43,10 @@ const props = defineProps({
     type: String,
     default: undefined,
   },
+  size: {
+    type: String as () => "small" | "medium" | "large",
+    default: "medium",
+  },
 });
 
 // shape 数组类型映射
@@ -53,7 +58,7 @@ const ShapeList = {
   xl: "XLarge",
 };
 
-const { type, shape, color } = toRefs(props);
+const { type, shape, color, size } = toRefs(props);
 
 let ColorSelected = ref<string>("");
 // 转换颜色 将color 属性转换

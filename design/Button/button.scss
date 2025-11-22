@@ -119,3 +119,19 @@
         background: none;
     }
 }
+
+
+
+
+// Size 尺寸样式
+.Button-size-small {
+    padding: var(--d-small-padding);
+    height: 24px;
+    line-height: 24px;
+}
+
+.Button-size-large {
+    padding: var(--d-large-padding);
+    height: 36px;
+    line-height: 36px;
+}
