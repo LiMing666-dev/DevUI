@@ -16,9 +16,9 @@ const Components = [
 ]
 
 const createDevUI = (option: OptionsDto) => {
-    const { theme } = option;
-
-    const devUIThemes = createDevUIThemes(theme!);
+ 
+    // 统一分发UI 配置管理 
+    const devUIThemes = createDevUIThemes(option);
 
     const install = (app: App) => {
         Components.forEach(op => {

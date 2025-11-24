@@ -10,5 +10,13 @@ import '@mdi/font/css/materialdesignicons.min.css'
 
 // Test Router 
 import router from '../test/router/index.ts'
-const devUI = createDevUI({})
+const devUI = createDevUI({
+    defaults: {
+        DButton: {
+            // size 测试无问题
+            // size: 'large'
+        }
+    }
+
+})
 createApp(App).use(devUI).use(router).mount('#app')
