@@ -1,5 +1,6 @@
 import { Button } from '../design/Button/index.ts'
 import { Icon } from '../design/Icon/index.ts'
+import { Input } from '../design/Input/index.ts'
 import { OptionsDto } from '../dtos/global.dto.ts'
 import { createDevUIThemes } from '../composables/themes.ts'
 import { type App } from 'vue'
@@ -12,11 +13,12 @@ import '../css/size.scss'
 
 const Components = [
     Button,
-    Icon
+    Icon,
+    Input
 ]
 
 const createDevUI = (option: OptionsDto) => {
- 
+
     // 统一分发UI 配置管理 
     const devUIThemes = createDevUIThemes(option);
 

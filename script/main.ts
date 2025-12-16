@@ -15,6 +15,9 @@ const devUI = createDevUI({
         DButton: {
             // size 测试无问题
             // size: 'large'
+
+            // type 测试
+            type: "transparent"
         }
     }
 

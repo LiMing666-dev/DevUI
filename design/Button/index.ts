@@ -19,6 +19,9 @@ const ButtonDefault = (_button: ButtonDto) => {
     if (_button.size) {
         buttonAttribute.size = _button.size
     }
+    if (_button.type) {
+        buttonAttribute.type = _button.type
+    }
 }
 
 

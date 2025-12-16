@@ -11,9 +11,14 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../../App.vue"),
         children: [
             {
-                path: "/",
+                path: "/button",
                 name: "Button",
                 component: () => import("../button/button.vue"),
+            },
+            {
+                path: "/",
+                name: "Input",
+                component: () => import("../input/input.vue"),
             }
         ]
     },

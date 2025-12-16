@@ -1,8 +1,9 @@
 <template>
   <div class="Box">
-    <h4 class="BoxTitle">Button 按钮</h4>
+    <h4 class="BoxTitle">Input 输入框</h4>
     <div class="BoxDocs">
-      d-button是由Fluent UI主题设计的一个按钮，用与一个即使操作
+      d-input是由Fluent
+      UI主题设计的一个输入框组件，提供了多种风格和尺寸的选择，可以满足不同场景下的输入需求。
     </div>
     <div class="BoxTags">
       <div class="BoxTag">
@@ -15,9 +16,7 @@
       </div>
     </div>
     <h4 class="BoxTitle2" style="margin-top: 30px">默认使用</h4>
-    <div class="BoxDocs">
-      下面演示一个按钮的默认使用方法，包括文本大写，点击的反馈。
-    </div>
+    <div class="BoxDocs">下面演示一个输入框的默认使用方法</div>
 
     <div class="BoxCode">
       <div class="BoxCodeHeader">
@@ -28,7 +27,7 @@
         </div>
       </div>
       <div class="BoxCodeConten">
-        <d-button>Dev 默认按钮</d-button>
+        <d-input>Dev 默认按钮</d-input>
       </div>
       <div class="BoxCodeT">
         <div v-text="code1"></div>
@@ -139,9 +138,7 @@
       </div>
     </div>
     <h4 class="BoxTitle2" style="margin-top: 30px">Api</h4>
-    <div class="BoxDocs">
-      下面是关于Button的Api文档
-    </div>
+    <div class="BoxDocs">下面是关于Button的Api文档</div>
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,0 +1,48 @@
+.Input {
+    .InputName {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+
+    .InputBox {
+        border: 1px #ccc solid;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 10px;
+        border-radius: 4px;
+        position: relative;
+
+        .InputText {
+            width: 200px;
+            outline: none;
+            border: none;
+            font-size: 12px;
+        }
+
+        .InputLine {
+            height: 1px;
+            width: 100%;
+            background: #ccc;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        .InputLine1 {
+            height: 1px;
+            width: 100%;
+            background: red;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+    }
+
+
+    .InputDocs {
+        font-size: 10px;
+        color: #ccc;
+        margin-top: 1px;
+    }
+}
