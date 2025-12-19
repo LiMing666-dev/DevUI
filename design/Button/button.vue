@@ -9,12 +9,20 @@
       `d-borderRadius-${ShapeList[shape || 'default']}`,
     ]"
   >
+    <template v-if="slots.prependIcon">
+      <slot></slot>
+    </template>
+    <d-icon v-else-if="prependIcon" :icon="prependIcon"></d-icon>
     <slot />
+    <template v-if="slots.appendIcon">
+      <slot name="appendIcon"></slot>
+    </template>
+    <d-icon v-else-if="appendIcon" :icon="appendIcon"></d-icon>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, toRefs } from "vue";
+import { onMounted, ref, toRefs, useSlots } from "vue";
 import { isContrastWithWhiteSimpl } from "../../composables/color";
 import { buttonAttribute } from "./index";
 defineOptions({
@@ -27,34 +35,27 @@ const BtnRef = ref<HTMLElement | null>(null);
 // Color Type 通用颜色类型
 const ColorTypes: string[] = ["primaty", "success", "error"];
 
-const props = defineProps({
-  /**
-   * 按钮类型
-   */
-  type: {
-    type: String as () => "primary" | "outline" | "subtle" | "transparent",
-    default: undefined,
-  },
-  shape: {
-    type: String as () => "none" | "sm" | "lg" | "xl",
-    default: undefined,
-  },
-  color: {
-    type: String,
-    default: undefined,
-  },
-  size: {
-    type: String as () => "small" | "medium" | "large",
-    default: "",
-  },
-});
+const slots = useSlots();
+
+const props = withDefaults(
+  defineProps<{
+    type: "primary" | "outline" | "subtle" | "transparent";
+    color: string;
+    size: "small" | "medium" | "large";
+    shape: "none" | "sm" | "lg" | "xl";
+    prependIcon: string;
+    appendIcon: string;
+  }>(),
+  {}
+);
 
 // shape 数组类型映射
 const ShapeList = {
   none: "None",
   sm: "Small",
   default: "Medium",
-  lg: "Large",        xl: "XLarge",
+  lg: "Large",
+  xl: "XLarge",
 };
 
 const { type, shape, color, size } = toRefs(props);
@@ -71,8 +72,6 @@ const ColorSeletct = () => {
   if (isTextDark) {
     BtnRef.value?.style.setProperty("--btn-text-color", "white");
   }
-
-  console.log(color?.value);
 
   BtnRef.value?.style.setProperty("--btn-color", color?.value as any);
   BtnRef.value?.style.setProperty("--btn-active-color", color?.value as any);

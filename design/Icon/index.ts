@@ -1,4 +1,4 @@
-import Icon from './icon.vue'
+import Icon from './icon.ts'
 import { type App } from 'vue';
 
 const install = (app: App) => {

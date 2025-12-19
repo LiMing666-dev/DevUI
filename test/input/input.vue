@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="BoxCodeConten">
-        <d-input>Dev 默认按钮</d-input>
+        <d-input v-model="value">Dev 默认按钮</d-input>
       </div>
       <div class="BoxCodeT">
         <div v-text="code1"></div>
@@ -142,11 +142,15 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { ref } from "vue"
+
 const code1 = "<d-button>Dev 默认按钮</d-button>";
 const code12 = `<d-button>Dev 默认按钮</d-button> 
    <d-button>Dev 默认按钮</d-button>
    <d-button>Dev 默认按钮</d-button>
    <d-button>Dev 默认按钮</d-button>`;
+
+const value = ref("13131");
 </script>
 
 <style lang="scss">

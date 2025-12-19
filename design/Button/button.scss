@@ -5,7 +5,7 @@
     --btn-active-color: var(--v-btn-color);
     // 按钮文字颜色 默认是白色
     --btn-text-color: #000000;
-    display: inline-block;
+    display: inline-flex;
     height: 30px;
     border: 1px #ccc solid;
     padding: var(--d-medium-padding);
@@ -17,7 +17,9 @@
     font-size: 12px;
     font-weight: 500;
     user-select: none;
-
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
     &:hover {
         background: color-mix(in srgb, var(--btn-active-color), transparent 30%);
     }
@@ -132,6 +134,6 @@
 
 .Button-size-large {
     padding: var(--d-large-padding);
-    height: 36px;
-    line-height: 36px;
+    height: 40px;
+    line-height: 40px;
 }

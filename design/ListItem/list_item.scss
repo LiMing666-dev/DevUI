@@ -1,0 +1,18 @@
+.D_List_Item {
+    font-size: 12px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    box-sizing: border-box;
+    padding: 0px 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+}

@@ -9,7 +9,8 @@ import '../composables/color.ts'
 import '@mdi/font/css/materialdesignicons.min.css'
 
 // Test Router 
-import router from '../test/router/index.ts'
+// import router from '../test/router/index.ts'
+import router from '../DevUiHome/routers/index.ts'
 const devUI = createDevUI({
     defaults: {
         DButton: {

@@ -1,4 +1,4 @@
-import dome from './dome.vue'
+import dome from './dome.ts'
 import { type App } from 'vue';
 
 const install = (app: App) => {

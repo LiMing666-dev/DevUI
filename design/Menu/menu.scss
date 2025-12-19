@@ -1,0 +1,24 @@
+.D_Menu {
+    position: relative;
+
+    .D_Menu_Activator {}
+
+    .Menu_Ref {
+    }
+
+    .D_Menu_Main {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        transform: translateX(-100%);
+        transition: .2s ease;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .D_Menu_Main_Hover {
+        width: 100%;
+        height: 100%;
+        opacity: 1 !important;
+    }
+}
