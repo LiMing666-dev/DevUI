@@ -15,6 +15,7 @@ import { List } from '../design/List/index.ts'
 import { ListItem } from '../design/ListItem/index.ts'
 import { Chip } from '../design/Chip/index.ts'
 import { Drawer } from '../design/Drawer/index.ts'
+import { ListGroup } from '../design/ListGroup/index.ts'
 import { OptionsDto } from '../dtos/global.dto.ts'
 import { createDevUIThemes } from '../composables/themes.ts'
 import { type App } from 'vue'
@@ -42,7 +43,8 @@ const Components = [
     List,
     ListItem,
     Chip,
-    Drawer
+    Drawer,
+    ListGroup
 ]
 
 const createDevUI = (option: OptionsDto) => {

@@ -1,12 +1,13 @@
 <template>
   <div class="D_List_Item">
     <template v-if="slots.prependIcon">
-      <slot></slot>
+      <slot name="prependIcon"></slot>
     </template>
     <d-icon v-else-if="prependIcon" :icon="prependIcon"></d-icon>
-    <slot></slot>
+    <slot v-if="slots.default"></slot>
+    <template v-else> {{ title }} </template>
     <template v-if="slots.appendIcon">
-      <slot></slot>
+      <slot name="appendIcon"></slot>
     </template>
     <d-icon v-else :icon="appendIcon"></d-icon>
   </div>
@@ -22,14 +23,16 @@ const props = withDefaults(
     appendIcon?: string;
     size?: number | string;
     prependIcon?: string;
+    title: string;
   }>(),
   {
     appendIcon: "",
     prependIcon: "",
+    title: "",
   }
 );
 
-const { appendIcon, prependIcon } = toRefs(props);
+const { appendIcon, prependIcon, title } = toRefs(props);
 
 defineOptions({
   name: "DListItem",
