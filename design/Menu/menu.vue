@@ -52,13 +52,13 @@ const slotProps = {};
 onMounted(() => {
   const activatorDom: HTMLElement | null = activatorRef.value;
   domWidth.value = activatorDom?.getBoundingClientRect().width || 0;
-  console.log(domWidth.value);
   const mainWidth: any =
     menuMainRef.value?.children[0]?.getBoundingClientRect().width || 0;
   const mainHeight: any =
     menuMainRef.value?.children[0]?.getBoundingClientRect().height || 0;
+
   a2.value = mainWidth + "px";
-  a1.value = mainHeight - 10 + "px";
+  a1.value = mainHeight + "px";
 
   menuMainRef.value?.children[0]?.classList.add("D_Menu_Main");
 });

@@ -1,12 +1,11 @@
 <template>
-  <div class="D_Header">
+  <div class="D_Card">
     <slot></slot>
   </div>
-  <div style="height: 64px;"></div>
 </template>
 
 <script lang="ts" setup>
 defineOptions({
-  name: "DHeader",
+  name: "DCard",
 });
 </script>

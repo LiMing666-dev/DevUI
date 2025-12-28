@@ -21,10 +21,12 @@
                   >文档</d-button
                 >
               </template>
-              <d-list>
-                <d-list-item appendIcon="bug-outline">报告Bug</d-list-item>
-                <d-list-item>开发历史</d-list-item>
-              </d-list>
+              <d-card style="width: 200px;">
+                <d-list>
+                  <d-list-item appendIcon="bug-outline">报告Bug</d-list-item>
+                  <d-list-item>开发历史</d-list-item>
+                </d-list>
+              </d-card>
             </d-menu>
             <d-menu>
               <template v-slot:activator="{ props }">
@@ -32,10 +34,12 @@
                   >支持</d-button
                 >
               </template>
-              <d-list>
-                <d-list-item appendIcon="bug-outline">报告Bug</d-list-item>
-                <d-list-item>开发历史</d-list-item>
-              </d-list>
+              <d-card style="width: 200px">
+                <d-list>
+                  <d-list-item appendIcon="bug-outline">报告Bug</d-list-item>
+                  <d-list-item>开发历史</d-list-item>
+                </d-list>
+              </d-card>
             </d-menu>
           </div>
         </div>

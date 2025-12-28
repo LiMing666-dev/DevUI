@@ -3,7 +3,7 @@
     <span
       class="mdi"
       :class="[`mdi-${icon}`]"
-      :style="{ fontSize: size + 'px' }"
+      :style="{ fontSize: size + 'px', color: color }"
       aria-hidden="true"
     >
     </span>
@@ -24,7 +24,7 @@ const props = withDefaults(
   }
 );
 
-const { icon, size } = toRefs(props);
+const { icon, size, color } = toRefs(props);
 
 defineOptions({
   name: "DIcon",

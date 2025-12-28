@@ -46,7 +46,14 @@ const props = withDefaults(
     prependIcon: string;
     appendIcon: string;
   }>(),
-  {}
+  {
+    type: undefined,
+    color: undefined,
+    shape: undefined,
+    size: undefined,
+    prependIcon: undefined,
+    appendIcon: undefined,
+  }
 );
 
 // shape 数组类型映射

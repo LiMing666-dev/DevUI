@@ -21,9 +21,34 @@ const routes: RouteRecordRaw[] = [
                 component: () => import("../pages/document/index.vue"),
                 children: [
                     {
-                        path: "/",
+                        path: "/1",
                         name: "Introduction",
                         component: () => import("../pages/document/introduction/index.vue")
+                    },
+
+
+                    // 组件路由
+                    {
+                        path: "/button",
+                        name: "Button",
+                        component: () => import('../pages/document/components/buttton.vue')
+                    },
+                    {
+                        path: "/card",
+                        name: "Card",
+                        component: () => import('../pages/document/components/card.vue')
+                    }, {
+                        path: "/chip",
+                        name: "Chip",
+                        component: () => import('../pages/document/components/chip.vue')
+                    }, {
+                        path: "/dialog",
+                        name: "Dialog",
+                        component: () => import('../pages/document/components/dialog.vue')
+                    }, {
+                        path: "/divider",
+                        name: "Divider",
+                        component: () => import('../pages/document/components/divider.vue')
                     }
                 ]
             },

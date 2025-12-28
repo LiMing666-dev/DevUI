@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { toRefs } from "vue";
-
+import { provide, reactive, toRefs } from "vue";
+import type { ListContext } from "./list.types";
 defineOptions({
   name: "DList",
 });
@@ -14,12 +14,19 @@ defineOptions({
 const props = withDefaults(
   defineProps<{
     nav: boolean;
+    opened: string | Object;
   }>(),
   {
     nav: false,
+    opened: "",
   }
 );
 
-const { nav } = toRefs(props);
+const { nav, opened } = toRefs(props);
 console.log(nav.value);
+
+const keyProvide = reactive<ListContext>({
+  key: opened,
+});
+provide("listKey", keyProvide);
 </script>

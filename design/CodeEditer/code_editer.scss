@@ -1,0 +1,62 @@
+.CodeEditer {
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .CodeEditerHeader {
+        height: 40px;
+        background: #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+
+        .CodeEditerHeaderRight {
+            display: flex;
+        }
+    }
+
+    .CodeMainBox {
+        height: 0px !important;
+        padding: 30px 0px;
+
+        .CodeEditerMain_Right {
+            width: 0px !important;
+        }
+    }
+
+    .CodeEditerMain {
+        // padding: 100px 0px;
+        height: 200px;
+        background: white;
+        display: flex;
+
+        .CodeEditerMain_Left {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .CodeEditerMain_Right {
+            width: 200px;
+            border-left: 1px #ccc solid;
+        }
+    }
+
+    .CodeEditerCode {
+        box-sizing: border-box;
+        padding: 10px;
+        border-top: 1px #ccc solid;
+
+        .CodeEditerCodeBox {
+            box-sizing: border-box;
+            padding: 20px;
+            background: black;
+            border-radius: 5px;
+            color: white;
+            font-size: 1;
+        }
+    }
+}

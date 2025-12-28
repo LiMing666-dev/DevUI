@@ -1,5 +1,5 @@
 .D_List_Item {
-    font-size: 12px;
+
     height: 40px;
     display: flex;
     align-items: center;
@@ -11,8 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 4px;
 
     &:hover {
         background: rgba(0, 0, 0, .1);
+    }
+
+    .D_List_Item_Tag {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        .D_List_Item_Tag_Title{
+            text-indent: 40px;
+        }
     }
 }

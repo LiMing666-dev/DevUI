@@ -1,14 +1,14 @@
-import Dialog from './dialog.ts'
+import Card from './card.ts'
 import { type App } from 'vue';
 
 const install = (app: App) => {
-    app.component(Dialog.name as string, Dialog);
+    app.component(Card.name as string, Card);
 }
 
 
 export {
     install,
-    Dialog
+    Card
 }
 
 
