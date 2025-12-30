@@ -1,7 +1,7 @@
 <template>
   <div class="PageBox">
     <div class="Box">
-      <h4 class="BoxTitle">Button 按钮</h4>
+      <h4 class="BoxTitle">Divider 分格线</h4>
       <div class="BoxDocs">
         d-button是由Fluent UI主题设计的一个按钮，用与一个即使操作
       </div>
@@ -18,27 +18,7 @@
         </div>
       </div>
       <code-editer :type="type">
-        <d-button>点击按钮</d-button>
-      </code-editer>
-      <div style="margin-top: 20px; margin-bottom: 10px">
-        <div style="font-size: 20px; font-weight: 700">尺寸(Size)</div>
-        <div style="font-size: 14px">
-          下面是展示按钮的基础模式，搭配一些图标展示
-        </div>
-      </div>
-      <code-editer :type="[]" :rightBox="true">
-        <d-button type="">默认尺寸</d-button>
-        <d-button style="margin-left: 10px">默认尺寸</d-button>
-        <d-button style="margin-left: 10px">默认尺寸</d-button>
-      </code-editer>
-      <div style="margin-top: 20px; margin-bottom: 10px">
-        <div style="font-size: 20px; font-weight: 700">块级按钮(Block)</div>
-        <div style="font-size: 14px">
-          块级按钮会沾满父级的空间，比较适合比较大的按钮
-        </div>
-      </div>
-      <code-editer :type="[]" :rightBox="true">
-        <d-button>默认尺寸</d-button>
+        <d-divider></d-divider>
       </code-editer>
     </div>
     <div class="BoxRight"></div>
@@ -47,12 +27,16 @@
 
 
 <script lang="ts" setup>
+import { ref } from "vue";
+
 const type = {
   primary: "primary",
   outline: "outline",
   subtle: "subtle",
   transparent: "transparent",
 };
+
+const a = ref();
 </script>
 
 <style scoped lang="scss">

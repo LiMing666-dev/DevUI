@@ -1,6 +1,7 @@
 <template>
   <div class="D_List" :class="{ D_list_Nav: nav }">
     <slot></slot>
+
   </div>
 </template>
 

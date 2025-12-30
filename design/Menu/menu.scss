@@ -4,6 +4,8 @@
     .D_Menu_Activator {}
 
     .Menu_Ref {
+        opacity: 1;
+
     }
 
     .D_Menu_Main {
@@ -13,7 +15,9 @@
         transform: translateX(-100%);
         transition: .2s ease;
         overflow: hidden;
-        opacity: 0;
+        opacity: 0 !important;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.14);
+        ;
     }
 
     .D_Menu_Main_Hover {

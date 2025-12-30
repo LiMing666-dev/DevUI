@@ -5,7 +5,7 @@
         <div class="header">
           <div class="header_left">
             <d-img src="../../../public/vite.svg"></d-img>
-            <d-button type="subtle" prependIcon="magnify"
+            <d-button type="subtle" prependIcon="magnify" style="margin-left: 10px;"
               >搜索
 
               <template #appendIcon>

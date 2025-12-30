@@ -51,9 +51,10 @@ const slotProps = {};
 
 onMounted(() => {
   const activatorDom: HTMLElement | null = activatorRef.value;
-  domWidth.value = activatorDom?.getBoundingClientRect().width || 0;
+  domWidth.value = activatorDom?.getBoundingClientRect().width || 200;
+
   const mainWidth: any =
-    menuMainRef.value?.children[0]?.getBoundingClientRect().width || 0;
+    menuMainRef.value?.children[0]?.getBoundingClientRect().width || 200;
   const mainHeight: any =
     menuMainRef.value?.children[0]?.getBoundingClientRect().height || 0;
 
