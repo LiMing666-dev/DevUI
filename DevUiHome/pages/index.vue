@@ -1,10 +1,10 @@
 <template>
   <div>
     <d-app>
-      <d-header>
+      <d-header >
         <div class="header">
           <div class="header_left">
-            <d-img src="../../../public/vite.svg"></d-img>
+            <d-img src="../../../public/logo.webp"></d-img>
             <d-button type="subtle" prependIcon="magnify" style="margin-left: 10px;"
               >搜索
 

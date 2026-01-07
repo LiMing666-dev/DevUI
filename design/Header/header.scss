@@ -4,5 +4,9 @@
     border-bottom: 1px #ccc solid;
     position: fixed;
     background: white;
+    display: flex;
+    align-items: center;
     z-index: 1;
+    padding: 0 50px;
+    box-sizing: border-box;
 }
