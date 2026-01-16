@@ -15,8 +15,11 @@
         <div style="font-size: 20px; font-weight: 700">使用演示</div>
         <div style="font-size: 14px">
           下面是展示按钮的基础模式，搭配一些图标展示
+       <d-icon icon="bug-outline"></d-icon>
+
         </div>
       </div>
+                <d-icon icon="star" size="12"></d-icon>
       <code-editer :type="type">
         <d-button>点击按钮</d-button>
       </code-editer>

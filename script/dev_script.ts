@@ -21,6 +21,7 @@ import { CodeEditer } from '../design/CodeEditer/index.ts'
 import { Divider } from '../design/Divider/index.ts'
 import { ExpansionPanels } from '../design/ExpansionPanels/index.ts'
 import { ExpansionPanel } from '../design/ExpansionPanel/index.ts'
+import { Select } from '../design/Select/index.ts'
 import { OptionsDto } from '../dtos/global.dto.ts'
 import { createDevUIThemes } from '../composables/themes.ts'
 import { type App } from 'vue'
@@ -54,7 +55,8 @@ const Components = [
     CodeEditer,
     Divider,
     ExpansionPanels,
-    ExpansionPanel
+    ExpansionPanel,
+    Select
 ]
 
 const createDevUI = (option: OptionsDto) => {

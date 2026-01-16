@@ -1,19 +1,16 @@
 <template>
-  <div
-    ref="BtnRef"
-    class="Button"
-    :class="[
-      `Button-${type}`,
-      `Button-color-${ColorSelected}`,
-      `Button-size-${buttonSize(size)}`,
-      `d-borderRadius-${ShapeList[shape || 'default']}`,
-    ]"
-  >
+  <div ref="BtnRef" class="Button" :class="[
+    `Button-${type}`,
+    `Button-color-${ColorSelected}`,
+    `Button-size-${buttonSize(size)}`,
+    `d-borderRadius-${ShapeList[shape || 'default']}`,
+  ]">
     <template v-if="slots.prependIcon">
       <slot></slot>
     </template>
     <d-icon v-else-if="prependIcon" :icon="prependIcon"></d-icon>
     <slot />
+    <d-icon :icon="icon"></d-icon>
     <template v-if="slots.appendIcon">
       <slot name="appendIcon"></slot>
     </template>
@@ -45,6 +42,7 @@ const props = withDefaults(
     shape: "none" | "sm" | "lg" | "xl";
     prependIcon: string;
     appendIcon: string;
+    icon: string
   }>(),
   {
     type: undefined,
@@ -53,6 +51,7 @@ const props = withDefaults(
     size: undefined,
     prependIcon: undefined,
     appendIcon: undefined,
+    icon: undefined
   }
 );
 
@@ -65,7 +64,7 @@ const ShapeList = {
   xl: "XLarge",
 };
 
-const { type, shape, color, size } = toRefs(props);
+const { type, shape, color, size, icon } = toRefs(props);
 
 let ColorSelected = ref<string>("");
 // 转换颜色 将color 属性转换
